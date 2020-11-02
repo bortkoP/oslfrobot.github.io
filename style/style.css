@@ -83,7 +83,7 @@ pre {
 	transition: .3s ease;
 }
 
-.footer a:link:hover {
+.footer a:hover {
 	background: gray;
 	color: white;
 }
