@@ -59,6 +59,10 @@ pre {
 	color: white;
 }
 
+.navbar-button {
+	display: none;
+}
+
 .footer {
 	background-color: black;
 	position: fixed;
@@ -195,11 +199,21 @@ a.button:hover {
 	.footer a {
 		padding: 10px 0px;
 		width: 100%;
+		display: none;
+	}
+
+	.footer-language {
+		display: inline !important;
 	}
 }
 
 @media screen and (max-width: 719px){
+	.navbar-button {
+		display: inline !important;
+	}
+
 	.navbar a {
+		display: none;
 		padding: 10px 0px;
 		width: 100%;
 	}
@@ -210,9 +224,6 @@ a.button:hover {
 	}
 
 	body {
-		margin-left: 10%;
-		margin-right: 10%;
-		margin-top: 50%;
-		margin-bottom: 50%;
+		margin: 15% 10%;
 	}
 }
