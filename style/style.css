@@ -1,5 +1,5 @@
 body {
-	margin: 5% 20%;	
+	margin: 5% 20%;
 	text-align: justify;
 	position: relative;
 	background-color: #282c34;
@@ -60,6 +60,10 @@ pre {
 }
 
 .navbar-button {
+	display: none;
+}
+
+.navbar-text {
 	display: none;
 }
 
@@ -137,14 +141,11 @@ iframe {
 }
 
 a {
-	transition: .3s ease;
-}
-
-body a {
 	color: black;
 	line-height: 1.7em;
 	font-size: 1.3em;
 	font-family: 'Exo 2', sans-serif;
+	transition: .3s ease;
 }
 
 body p a {
@@ -205,19 +206,52 @@ a.button:hover {
 	.footer-language {
 		display: inline !important;
 	}
+
+	.navbar .link {
+		display: inline;
+	}
 }
 
-@media screen and (max-width: 719px){
-	.navbar-button {
-		display: inline !important;
+@media screen and (min-width: 719px) {
+	.navbar .link {
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 719px) {
+	.navbar a {
+		font-size: 1.1em;
 	}
 
-	.navbar a {
-		display: none;
-		padding: 10px 0px;
-		width: 100%;
+	.footer a {
+		font-size: 1.1em;
 	}
-	
+
+	.navbar .navbar-text-button .navbar-button {
+		display: inline;
+	}
+
+	.navbar .navbar-text-button .navbar-text {
+		display: inline;
+	}
+
+	.navbar .link {
+		display: none;
+	}
+
+	.navbar .link a {
+		width: 100%;
+		background-color: #151515 !important;
+	}
+
+	.navbar .navbar-text-button a.navbar-button {
+		width: 20%;
+	}
+
+	.navbar .navbar-text-button a.navbar-text {
+		width: 80%;
+	}
+
 	iframe {
 		width: 360px;
 		height: 202px;
@@ -225,5 +259,21 @@ a.button:hover {
 
 	body {
 		margin: 15% 10%;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+	
+	p {
+		font-size: 1.1em;
+	}
+
+	a {
+		font-size: 1.1em;
 	}
 }
