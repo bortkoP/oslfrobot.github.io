@@ -27,9 +27,24 @@ p {
 }
 
 pre {
-	font-family: 'Hack', monospace;
 	background-color: #282c34;
-	padding: 1em;
+	padding: 1em 1em 1em 0em;
+	counter-reset: line;
+	overflow: auto;
+}
+
+code {
+	font-family: 'Hack', monospace;
+}
+
+pre code::before {
+	counter-increment: line;
+	content: counter(line);
+	display: inline-block;
+	padding: 0em 0.5em;
+	width: 1.5em;
+	color: #555;
+	text-align: right;
 }
 
 .navbar {
@@ -100,8 +115,7 @@ pre {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 1% auto;
 }
 
 table .container a {
@@ -134,10 +148,22 @@ img {
 	opacity: 1;
 }
 
-iframe {
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	/* 16:9 */
+	height: 0;
+}
+
+.video iframe {
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 a {
@@ -196,6 +222,16 @@ a.button:hover {
 	background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
+.responsive-2,
+.responsive-3 {
+	display: inline-flex;
+}
+
+.responsive-2 .container a,
+.responsive-3 .container a {
+	width: 97% !important;
+}
+
 @media screen and (max-width: 1200px) {
 	.footer a {
 		padding: 10px 0px;
@@ -207,8 +243,20 @@ a.button:hover {
 		display: inline !important;
 	}
 
+	body {
+		margin: 10% 20%;
+	}
+
 	.navbar .link {
 		display: inline;
+	}
+
+	.responsive-3 {
+		display: block;
+	}
+
+	.responsive-3 .container a {
+		width: 97% !important;
 	}
 }
 
@@ -252,11 +300,6 @@ a.button:hover {
 		width: 80%;
 	}
 
-	iframe {
-		width: 360px;
-		height: 202px;
-	}
-
 	body {
 		margin: 15% 10%;
 	}
@@ -264,16 +307,24 @@ a.button:hover {
 	h1 {
 		font-size: 2em;
 	}
-	
+
 	h2 {
 		font-size: 1.5em;
 	}
-	
+
 	p {
 		font-size: 1.1em;
 	}
 
 	a {
 		font-size: 1.1em;
+	}
+
+	.responsive-2 {
+		display: block;
+	}
+
+	.responsive-2 .container a {
+		width: 97% !important;
 	}
 }

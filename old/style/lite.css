@@ -135,7 +135,7 @@ td {
 }
 
 .foot_left a {
-    padding-left: 13%;
+    padding-left: 32%;
     position: relative;
     float: center;
     color: #66ff66;
@@ -156,7 +156,7 @@ td {
     padding-bottom: 0px;
 }
 
-/* .foot_left p1 {
+.foot_left a.version {
     position: relative;
     float: right;
     color: #66ff66;
@@ -165,7 +165,7 @@ td {
     padding-right: 20px;
     padding-top: 15px;
     padding-bottom: 0px;
-} */
+}
 
 footer {
     overflow: auto;
