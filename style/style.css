@@ -219,7 +219,7 @@ body a:hover {
 	text-align: center;
 }
 
-body a a1 {
+body a span.count {
 	color: var(--text);
 }
 
