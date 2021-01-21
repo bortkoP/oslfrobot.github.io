@@ -1,3 +1,5 @@
 # One sensor line follower robot
 
-Website about one sensor line follower robot, that can also avoid objects and have automatic calibration.
+[Website](https://oslfrobot.github.io) about one sensor line follower robot, that can also avoid objects and have automatic calibration.
+
+[Here](http://oslfrobot.wz.sk) is old version of website...
